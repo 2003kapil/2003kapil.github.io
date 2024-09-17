@@ -1,85 +1,194 @@
 <!DOCTYPE html>
-
 <html lang="en">
 
 <head>
-
     <meta charset="UTF-8">
-
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kapil Adhikari Personal Site</title>
 
-    <title>kapil Adhikari personal Site</title>
+    <style>
+     
+        body {
+            background-color: #f0f8ff;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            color: #333;
+            margin: 0;
+            padding: 0;
+        }
 
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        header {
+            text-align: center;
+            padding: 20px;
+            background-color: #333;
+            color: white;
+            border-bottom: 5px solid #00796b;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+
+        header h1 {
+            margin: 0;
+            font-size: 3em;
+        }
+
+   
+        .profile {
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            margin: 40px 0;
+            padding: 30px;
+            background-color: #fff;
+            border-radius: 10px;
+            box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+            border-left: 10px solid #333;
+        }
+
+        .profile img {
+            border-radius: 50%;
+            border: 5px solid #00796b;
+            box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+            width: 250px;
+            height: 250px;
+        }
+
+        .profile-info {
+            max-width: 600px;
+        }
+
+        .profile-info h2 {
+            color: #333;
+            font-size: 2.5em;
+        }
+
+        .profile-info p {
+            line-height: 1.7;
+            font-size: 1.2em;
+        }
+
+        /* Courses Section */
+        h3 {
+            color: #333;
+            font-size: 2em;
+            border-bottom: 3px solid #333;
+            padding-bottom: 10px;
+            display: inline-block;
+        }
+
+        ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        ul li {
+            background-color: #b2dfdb;
+            padding: 15px;
+            margin: 10px 0;
+            border-radius: 8px;
+            box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
+            font-size: 1.2em;
+            border-left: 5px solid #333;
+        }
+ 
+        .fun-facts {
+            margin: 40px 0;
+        }
+
+        .fun-facts h4 {
+            color: #00796b;
+            font-size: 1.7em;
+            margin-bottom: 10px;
+        }
+
+        .fun-facts p {
+            font-size: 1.2em;
+            line-height: 1.6;
+            margin-bottom: 20px;
+            background-color: #e0f7fa;
+            padding: 15px;
+            border-radius: 8px;
+            border-left: 5px solid #333;
+            box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
+        }
+
+        footer {
+            text-align: center;
+            margin: 50px 0;
+        }
+
+        footer img {
+            border-radius: 10px;
+            border: 5px solid #00796b;
+            box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+            width: 400px;
+            height: auto;
+        }
+
+        @media screen and (max-width: 768px) {
+            .profile {
+                flex-direction: column;
+            }
+
+            .profile img {
+                margin-bottom: 20px;
+            }
+
+            .profile-info h2 {
+                font-size: 2em;
+            }
+        }
+    </style>
 </head>
 
 <body>
+    <header>
+        <h1>Kapil Adhikari</h1>
+    </header>
 
-    <table>
+    <div class="container">
+        <section class="profile">
+            <img src="images/kapil photo.jpg" alt="Kapil Adhikari's Photo">
+            <div class="profile-info">
+                <h2>Welcome to My Personal Site</h2>
+                <p>
+                    I am a student at Elizabethtown College, currently studying Information Systems. My academic journey is focused on understanding
+                    the intersection of technology and business, equipping me with the skills to manage and improve information systems in various organizations. 
+                    Learn more about <span>system information</span> at <a href="https://www.etown.edu/" target="_blank" style="color: #00796b;">Etown</a>.
+                </p>
+            </div>
+        </section>
 
-        <tr>
+   
+        <h3>Courses</h3>
+        <ul>
+            <li>CS 310: Web Development</li>
+            <li>CE Digital Photography</li>
+            <li>BA165_A_B - Personal Financial Planning</li>
+            <li>CS209A - Database Systems</li>
+        </ul>
 
-            <td>
+        <!-- Fun Facts Section -->
+        <div class="fun-facts">
+            <h4>Photo Editing</h4>
+            <p>Photography is another passion that allows me to express my creativity. I love capturing moments that tell a story, whether it's the serene beauty of nature, the hustle and bustle of urban life, or the candid emotions of people.</p>
 
-                <img src="images/kapil photo.jpg" width="200">
+            <h4>Traveling</h4>
+            <p>Traveling has enriched my life with diverse experiences and perspectives. I've been fortunate to explore various parts of the world, each journey offering me new insights and memories.</p>
 
-            </td>
+            <h4>Playing Soccer</h4>
+            <p>Soccer has always been more than just a sport for me; it's a way to connect with others and push my limits both physically and mentally.</p>
+        </div>
 
-            <td>
-
-                <h1>Kapil Adhikari </h1>
-
-                <p> I am a student at Elizabethtown College, where I am currently studying Information Systems. My academic journey is focused on understanding
-                     the intersection of technology and business, equipping me with the skills 
-                     to manage and improve information systems in various 
-                     organizations.  <span>system information </span> at
-                      <a href="https://www.etown.edu/" target="_blank">Etown</a>.</p>
-
-            </td>
-
-        </tr>
-
-    </table>
-
-    <h3>Courses</h3>
-
-    <ul>
-
-        <li>CS 310:web Development </li>
-        <li> CE Digital Photography</li>
-        <li>BA165_A_B - Personal Financial Planning</li>
-        <li>CS209A - Database Systems</li>
-
-    </ul>
-
-
-        </tbody>
-
-    </table>
-    
-    <h3>Fun fact about me </h3>
-<h4> Photo editing: Photography is another passion 
-    that allows me to express my creativity. 
-    I love capturing moments that tell a story,
-     whether its the serene beauty of nature, the hustle 
-     and bustle of urban life, or the candid emotions of people.</h4>
-    <h4>travling: Traveling is something I hold dear, 
-        as it has enriched my life with diverse experiences
-         and perspectives. Ive been fortunate to explore various 
-         parts of the world, each journey offering me new insights and 
-         memories.</h4>
-    <h4>Playing soccera: has always been 
-        more than just a sport for me; its 
-        a way to connect with others and push my 
-        limits both physically and mentally. </h4>
-
-
-<td>
-
-    <img src="images/IMG_1109.JPG" width="300">
-
-</td>
-
-
+        <!-- Footer Section with Image -->
+        <footer>
+            <img src="images/IMG_1109.JPG" alt="An example of my work">
+        </footer>
+    </div>
 </body>
 
 </html>

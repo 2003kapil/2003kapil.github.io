@@ -5,9 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Kapil Adhikari Personal Site</title>
-
     <style>
-     
         body {
             background-color: #f0f8ff;
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
@@ -16,17 +14,11 @@
             padding: 0;
         }
 
-        .container {
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 20px;
-        }
-
         header {
-            text-align: center;
-            padding: 20px;
             background-color: #333;
             color: white;
+            padding: 20px;
+            text-align: center;
             border-bottom: 5px solid #00796b;
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
         }
@@ -36,7 +28,28 @@
             font-size: 3em;
         }
 
-   
+        nav {
+            text-align: center;
+            margin: 20px 0;
+        }
+
+        nav a {
+            color: #00796b;
+            text-decoration: none;
+            font-size: 1.2em;
+            margin: 0 15px;
+        }
+
+        nav a:hover {
+            text-decoration: underline;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
         .profile {
             display: flex;
             justify-content: space-around;
@@ -55,6 +68,11 @@
             box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
             width: 250px;
             height: 250px;
+            transition: transform 0.3s ease;
+        }
+
+        .profile img:hover {
+            transform: scale(1.05);
         }
 
         .profile-info {
@@ -71,13 +89,13 @@
             font-size: 1.2em;
         }
 
-        /* Courses Section */
         h3 {
             color: #333;
             font-size: 2em;
             border-bottom: 3px solid #333;
             padding-bottom: 10px;
             display: inline-block;
+            margin-bottom: 20px;
         }
 
         ul {
@@ -93,8 +111,13 @@
             box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
             font-size: 1.2em;
             border-left: 5px solid #333;
+            transition: background-color 0.3s ease;
         }
- 
+
+        ul li:hover {
+            background-color: #a0d8d0;
+        }
+
         .fun-facts {
             margin: 40px 0;
         }
@@ -132,6 +155,7 @@
         @media screen and (max-width: 768px) {
             .profile {
                 flex-direction: column;
+                align-items: center;
             }
 
             .profile img {
@@ -140,6 +164,11 @@
 
             .profile-info h2 {
                 font-size: 2em;
+                text-align: center;
+            }
+
+            ul {
+                padding: 0 20px;
             }
         }
     </style>
@@ -149,10 +178,17 @@
     <header>
         <h1>Kapil Adhikari</h1>
     </header>
+    
+    <nav>
+        <a href="#profile">Profile</a>
+        <a href="#courses">Courses</a>
+        <a href="#fun-facts">Fun Facts</a>
+        <a href="#footer">Gallery</a>
+    </nav>
 
     <div class="container">
-        <section class="profile">
-            <img src="images/kapil photo.jpg" alt="Kapil Adhikari's Photo">
+        <section id="profile" class="profile">
+            <img src="images/kapil_photo.jpg" alt="Kapil Adhikari's Photo">
             <div class="profile-info">
                 <h2>Welcome to My Personal Site</h2>
                 <p>
@@ -163,8 +199,7 @@
             </div>
         </section>
 
-   
-        <h3>Courses</h3>
+        <h3 id="courses">Courses</h3>
         <ul>
             <li>CS 310: Web Development</li>
             <li>CE Digital Photography</li>
@@ -173,7 +208,7 @@
         </ul>
 
         <!-- Fun Facts Section -->
-        <div class="fun-facts">
+        <div id="fun-facts" class="fun-facts">
             <h4>Photo Editing</h4>
             <p>Photography is another passion that allows me to express my creativity. I love capturing moments that tell a story, whether it's the serene beauty of nature, the hustle and bustle of urban life, or the candid emotions of people.</p>
 
@@ -185,10 +220,21 @@
         </div>
 
         <!-- Footer Section with Image -->
-        <footer>
+        <footer id="footer">
             <img src="images/IMG_1109.JPG" alt="An example of my work">
         </footer>
     </div>
+
+    <!-- JavaScript for Dynamic Effects -->
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const profileImg = document.querySelector('.profile img');
+
+            profileImg.addEventListener('click', function() {
+                alert('You clicked the profile picture!');
+            });
+        });
+    </script>
 </body>
 
 </html>
